@@ -252,3 +252,38 @@ Idea: Mirror the previous guess around the midpoint to determine which half cont
 4. Return L
 
 Time complexity: ~log n
+
+==================================================================
+************************  QUESTION 8  ****************************
+==================================================================
+
+Queue with two stacks. 
+
+Implement a queue with two stacks so that each queue operations takes a constant amortized number of stack operations.
+
+<<<SOLUTION>>>
+
+Base: two control structures (main stack and auxiliary stack)
+
+Enqueue(x): * Insert the element into the main stack.
+Dequeue(): * Remove the element from the auxiliary stack
+if the auxiliary stack is empty then pop all elements from main stack and push them to the auxiliary stack (inverse order)
+
+==================================================================
+************************  QUESTION 9  ****************************
+==================================================================
+
+Stack with max. 
+
+Create a data structure that efficiently supports the stack operations (push and pop) and also a 
+return-the-maximum operation. Assume the elements are real numbers so that you can compare them.
+
+<<<SOLUTION>>>
+
+Base: two control structures (main stack and auxiliary stack)
+
+Push(x): * Insert the element into the main stack.
+If the auxiliary stack is empty or if the element is greater than or equal to the current top of the auxiliary stack, insert it into the auxiliary stack as well.
+Pop(): * Remove the element from the main stack.
+If the removed value is equal to the top of the auxiliary stack, remove it from the auxiliary stack as well.
+GetMax(): * Simply consult the top of the auxiliary stack without removing it.

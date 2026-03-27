@@ -3,11 +3,11 @@
    with another tree of equal or greater size.
 */
    
-public class WeightedQuickUnionUF {
+public class QuickUnionBySizeUF {
 	private int[] id;
 	private int[] sz;
 	
-	public WeightedQuickUnionUF(int N) {
+	public QuickUnionBySizeUF(int N) {
 		id = new int[N];
 		sz = new int[N];
 		for (int i = 0; i < N; i++) {
